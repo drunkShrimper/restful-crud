@@ -1,8 +1,11 @@
 package com.scau.net17.lipan.restfulcrud.config;
 
+import com.scau.net17.lipan.restfulcrud.component.MyLocaleResolver;
+
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.*;
 
 @Configuration
@@ -15,14 +18,18 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/index.html").setViewName("login");
     }
 
-/*
-    @Override
+
+/*    @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/");
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("/webjars/");
+    }*/
+
+    @Bean
+    public LocaleResolver localeResolver(){
+        return new MyLocaleResolver();
     }
-*/
 
 }
