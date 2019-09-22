@@ -6,8 +6,18 @@
 </head>
 <body>
 <p th:text="${name}">hahahaah</p>
-<p th:text="${name}"></p>
-<p th:text="${name}"></p>
-<p th:text="${name}"></p>
+
+<hr/>
+
+<h1 th:text="${user}" th:each="user:${users}"></h1>
+
+<hr/>
+
+<span>
+    <span th:text="${user}" th:each="user:${users}"></span>
+</span>
+
+<hr/>
+
 </body>
 </html>
