@@ -4,6 +4,9 @@ import com.scau.net17.lipan.restfulcrud.component.LoginHandlerInterceptor;
 import com.scau.net17.lipan.restfulcrud.component.MyLocaleResolver;
 
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
+import org.springframework.boot.web.server.ConfigurableWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
@@ -18,8 +21,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public WebMvcConfigurer webMvcConfigurer(){
-        WebMvcConfigurer webMvcConfigurer = new WebMvcConfigurer(){
+    public WebMvcConfigurer webMvcConfigurer() {
+        WebMvcConfigurer webMvcConfigurer = new WebMvcConfigurer() {
 /*            @Override
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginHandlerInterceptor())
@@ -48,7 +51,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public LocaleResolver localeResolver(){
+    public LocaleResolver localeResolver() {
         return new MyLocaleResolver();
     }
 
