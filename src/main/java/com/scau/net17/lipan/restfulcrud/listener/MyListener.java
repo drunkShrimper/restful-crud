@@ -1,6 +1,6 @@
 package com.scau.net17.lipan.restfulcrud.listener;
 
-import org.apache.tomcat.util.digester.SetPropertiesRule;
+//import org.apache.tomcat.util.digester.SetPropertiesRule;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
