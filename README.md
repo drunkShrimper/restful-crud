@@ -1,3 +1,2 @@
 # 基于springboot的restful crud 小练习
-# 主要知识点
-1. springboot实现国际化
+# https://www.bilibili.com/video/av38657363?p=42
